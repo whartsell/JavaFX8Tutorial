@@ -3,11 +3,14 @@ package net.willshouse.address; /**
  */
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import net.willshouse.address.model.Person;
 
 import java.io.IOException;
 
@@ -16,8 +19,23 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
+    private ObservableList<Person> personData = FXCollections.observableArrayList();
+
+    public MainApp() {
+        personData.add(new Person("Herman", "Munster"));
+        personData.add(new Person("Lily", "Munster"));
+        personData.add(new Person("Grandpa", "Munster"));
+        personData.add(new Person("Eddie", "Munster"));
+        personData.add(new Person("Marilyn", "Munster"));
+
+    }
+
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public ObservableList<Person> getPersonData() {
+        return personData;
     }
 
     @Override
