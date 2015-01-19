@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import net.willshouse.address.model.Person;
+import net.willshouse.address.view.PersonOverviewController;
 
 import java.io.IOException;
 
@@ -59,6 +60,9 @@ public class MainApp extends Application {
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             rootLayout.setCenter(personOverview);
+
+            PersonOverviewController controller = loader.getController();
+            controller.setMainApp(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
