@@ -2,7 +2,8 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8"
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="300.0" prefWidth="400.0" styleClass="background"
+            stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8"
             fx:controller="net.willshouse.address.view.PersonEditDialogController">
     <children>
         <GridPane layoutX="107.0" layoutY="155.0" prefHeight="275.0" prefWidth="600.0" AnchorPane.bottomAnchor="75.0"
@@ -37,10 +38,9 @@
         <HBox layoutX="464.0" layoutY="294.0" spacing="5.0" AnchorPane.bottomAnchor="10.0"
               AnchorPane.rightAnchor="10.0">
             <children>
-                <Button layoutX="453.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0"
-                        prefWidth="80.0" text="Ok"/>
-                <Button layoutX="512.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleCancel"
-                        prefWidth="80.0" text="Cancel"/>
+                <Button defaultButton="true" layoutX="453.0" layoutY="346.0" mnemonicParsing="false"
+                        onAction="#handleOk" prefHeight="25.0" prefWidth="80.0" text="Ok"/>
+                <Button layoutX="512.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel"/>
             </children>
         </HBox>
     </children>
